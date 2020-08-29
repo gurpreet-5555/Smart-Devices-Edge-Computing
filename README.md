@@ -30,6 +30,10 @@ You can explore more object detection models through below link:
   <li>Support for multiple streaming protocols from IP cameras such as rtsp, http. Can also be used with static video file depending on installed codecs(.mp4, .avi etc..)</li>
 </ul>  
 
+<h2>Detections</h2>
+<img src="output/output.gif" width="1100" height="500" />
+
+
 <h2>Requirements:</h2>
 <ul>
   <li>Python 3.6</li>
