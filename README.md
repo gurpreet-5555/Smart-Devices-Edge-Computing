@@ -9,15 +9,16 @@ Human Detection is performed at the edge using <b>Nvidia Jetson Nano SBC (Single
 <br>
 
 <br>
-In this project, we'll be utilizing 'ssd-mobilenet-v2' object detection architecture specially optimized for Nvidia GPUs (Graphic Processing Units) known as <b>TensorRT</b>.<br>
+In this project, we'll be utilizing 'ssd-mobilenet-v2' object detection architecture specially optimized for Nvidia GPUs (Graphic Processing Units) known as <b>TensorRT</b>.
+<br>
 TensorRT is a high-performance neural network inference optimizer and runtime engine that optimizes a network by combining layers for improved performance, low memory consumption and faster inference.
 
-<br>
+<br><br>
 You can explore more object detection models through below link:
 
 <a href="https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html">NVIDIA TensorRT Documentation</a>
 
-<br> <br>
+<br>
 
 <h2>Features:</h2>
 <ul>
@@ -32,21 +33,22 @@ You can explore more object detection models through below link:
 <h2>Requirements:</h2>
 <ul>
   <li>Python 3.6</li>
-  <li>OpenCV 4.2.0</li>
-  <li>Tensorflow 1.15</li>
-  <li>NumPy 1.18.2</li>  
+  <li>OpenCV 3.3.1</li>
+  <li>TensorRT 5.1.6</li>
+  <li>Cuda 10.0</li>
+  <li>NumPy 1.19.0</li>  
 </ul>
 
 <h2>How to use?</h2>
 <ul>
   <li>Clone Repository</li>
-  <pre>https://github.com/gurpreet-5555/Intelligent-Devices.git</pre>  </ul>
+  <pre>https://github.com/gurpreet-5555/Smart-Devices-Edge-Computing.git</pre>  </ul>
 <ul>  <li>Navigate to main directory</li>
-  <pre>cd Intelligent-Devices/main</pre> </ul>
+  <pre>cd Smart-Devices-Edge-Computing</pre> </ul>
 <ul><li>Specify your code in <b>device_controller.py</b> to start and stop IoT powered device.</li>
 <pre>Sample code is included to turn on/off Philips Hue Lamps</pre></ul>
 <ul><li>Execute Program</li>
-<pre>python start_controller.py --confidence 0.4 --stream http://192.168.1.43:8080/video --startthreshold 10 --stopthreshold 60</pre>
+<pre>python start_detection.py --confidence 0.4 --stream http://192.168.1.43:8080/video --startthreshold 10 --stopthreshold 60</pre>
 <pre>Arguments -
 confidence : Confidence threshold for person detection. Default value is 0.2 (Optional)
 stream : Source of video feed (http, rtsp etc) or video file. (Required)
