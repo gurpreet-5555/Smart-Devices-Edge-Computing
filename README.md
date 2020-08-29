@@ -42,7 +42,7 @@ You can explore more object detection models through below link:
 <h2>How to use?</h2>
 <ul>
   <li>Clone Repository</li>
-  <pre>https://github.com/gurpreet-5555/Smart-Devices-Edge-Computing.git</pre>  </ul>
+  <pre>git clone https://github.com/gurpreet-5555/Smart-Devices-Edge-Computing.git</pre>  </ul>
 <ul>  <li>Navigate to main directory</li>
   <pre>cd Smart-Devices-Edge-Computing</pre> </ul>
 <ul><li>Specify your code in <b>device_controller.py</b> to start and stop IoT powered device.</li>
