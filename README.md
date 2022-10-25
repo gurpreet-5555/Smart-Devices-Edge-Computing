@@ -1,22 +1,16 @@
 # Smart-Devices (Edge Computing with NVIDIA Jetson Nano)
-Solution that enables IoT supported devices to "see" human activity and turn on/off automatically. <br>Computer Vision &amp; Object Detection is used to detect human presence and trigger signal to IoT device for automatic operation.
+Solution that enables IoT supported devices to "see" human activity and automatically turn on/off. <br>Computer Vision &amp; Object Detection is used to detect human presence and send a signal to an IoT device so that it can operate automatically.
 <br><br>
-This project utilizes performs human detection at the edge without any need to send the video feed to cloud for inference.<br>
-Human Detection is performed at the edge using <b>Nvidia Jetson Nano SBC (Single-Board Computer) at frame rates of 20-25 FPS</b>.<br>
+This program performs person detection at the edge, eliminating the need to send the video feed to the cloud for inference.<br>
+Person Detection is performed at the edge using <b>Nvidia Jetson Nano SBC (Single-Board Computer) at a frame rates of 20-25 FPS</b>.<br>
+<br>
+Note: This program will only work on the Nvidia Jetson Nano SBC. See this <a href="https://github.com/gurpreet-5555/Smart-Devices">project</a> for running it on more devices.
 
 <img src="images/Jetson_Nano.jpg" width="600" height="300" />
-
-<br>
-
-<br>
-In this project, we'll be utilizing 'ssd-mobilenet-v2' object detection architecture specially optimized for Nvidia GPUs (Graphic Processing Units) known as <b>TensorRT</b>.
-<br>
-TensorRT is a high-performance neural network inference optimizer and runtime engine that optimizes a network by combining layers for improved performance, low memory consumption and faster inference.
-
+In this project, we are using the 'ssd-mobilenet-v2' object detection architecture, specially optimized for Nvidia Graphic Processing Units (TensorRT).
+TensorRT is a high-performance neural network inference optimizer and runtime engine that optimizes a CNN(Convolutional Neural Network) by combining layers for improved performance, low memory consumption and faster inference.
 <br><br>
-You can explore more object detection models through below link:
-
-<a href="https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html">NVIDIA TensorRT Documentation</a>
+More details on object detection models: <a href="https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html">NVIDIA TensorRT Documentation</a>
 
 <br>
 
@@ -54,8 +48,8 @@ You can explore more object detection models through below link:
 <ul><li>Execute Program</li>
 <pre>python start_detection.py --confidence 0.4 --stream http://192.168.1.43:8080/video --startthreshold 10 --stopthreshold 60</pre>
 <pre>Arguments -
-confidence : Confidence threshold for person detection. Default value is 0.2 (Optional)
-stream : Source of video feed (http, rtsp etc) or video file. (Required)
+confidence : Confidence threshold (0.0 to 1.0) for person detection. Use a lower value to compensate for poor lighting or image quality. (Optional)
+stream : Source of video feed (http, rtsp etc) or video file. Specify this parameter as 0 to use in-built webcam.(Required)
 startthreshold: Time to wait in seconds before device starts once human activity is detected. Default value is 5 seconds. (Optional)
 stopthreshold: Time to wait in seconds before device stops once no human activity is detected in video stream. Default value is 30 seconds. (Optional)
 </pre></ul>
